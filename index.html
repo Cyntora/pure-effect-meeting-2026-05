@@ -183,10 +183,20 @@
   .closing .closing-logo svg path { fill: var(--bg) !important; }
 
   /* Print / PDF */
+  @page { size: 1600px 900px; margin: 0; }
   @media print {
-    nav.top { position: static; }
-    section { page-break-after: always; min-height: 0; padding: 60px 50px; }
-    body { background: white; }
+    nav.top { position: absolute; top: 0; }
+    section { page-break-after: always; break-after: page; min-height: 900px; height: 900px; padding: 90px 70px 60px 70px; overflow: hidden; }
+    section .inner { max-width: 1460px; }
+    body { background: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    h1 { font-size: 72px; }
+    h2 { font-size: 46px; margin-bottom: 22px; }
+    .kpi .actual { font-size: 50px; }
+    .cover .meeting-meta { margin-top: 36px; padding-top: 22px; }
+    .agenda-list li { padding: 16px 0; }
+    table { font-size: 14px; }
+    table th, table td { padding: 10px 10px; }
+    .closing { background: #1B1B1F !important; color: var(--bg) !important; }
   }
 
   @media (max-width: 880px) {
