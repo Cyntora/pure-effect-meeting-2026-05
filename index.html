@@ -283,34 +283,34 @@
   <div class="inner">
     <div class="num">03 · Utfall</div>
     <h2>April i Google Ads, mot mål och mot mars.</h2>
-    <p style="max-width: 760px; color: var(--ink-soft);">Google Ads-attribuerade konverteringar i april mot målet 100 ordrar. Två linser: vad Google Ads-plattformen själv rapporterar, och vad GA4 tillskriver Google Ads via last-non-direct. Båda är värda att ha med.</p>
+    <p style="max-width: 800px; color: var(--ink-soft);">Bara Google Shopping App Purchase, alltså verkliga ordrar. Inte Add To Cart eller andra primary conversion actions.</p>
 
     <div class="kpi-grid">
       <div class="kpi">
-        <h4>Google Ads ordrar (Ads-platform)</h4>
-        <div class="actual">123,5</div>
-        <div class="target">Mål: 100. Mars: 204,5.</div>
-        <span class="delta good">+24% mot mål</span>
-        <div class="src">Källa: Google Ads konton 855-631-6495</div>
+        <h4>Google Ads ordrar (Purchase only)</h4>
+        <div class="actual">62</div>
+        <div class="target">Mål: 100. Mars: 84.</div>
+        <span class="delta bad">−38% mot mål</span>
+        <div class="src">Källa: Google Ads, Google Shopping App Purchase</div>
       </div>
       <div class="kpi">
-        <h4>Google Ads ordrar (GA4-attribuerat)</h4>
+        <h4>Konv.värde (Purchase only)</h4>
+        <div class="actual">25 386</div>
+        <div class="target">SEK. Mars: 32 102 SEK.</div>
+        <span class="delta bad">−21% mot mars</span>
+        <div class="src">Källa: Google Ads, Google Shopping App Purchase</div>
+      </div>
+      <div class="kpi">
+        <h4>GA4 google/cpc-purchases</h4>
         <div class="actual">47</div>
-        <div class="target">Mål: 100. Mars: 76.</div>
-        <span class="delta bad">−53% mot mål</span>
-        <div class="src">Källa: GA4 google/cpc, last non-direct</div>
-      </div>
-      <div class="kpi">
-        <h4>Konv.värde Google Ads</h4>
-        <div class="actual">44 448</div>
-        <div class="target">SEK [Ads]. Mars: 69 417 SEK.</div>
-        <span class="delta bad">−36% mot mars</span>
-        <div class="src">Källa: Google Ads conversion_value</div>
+        <div class="target">Mars: 76. Last non-direct.</div>
+        <span class="delta bad">−38% mot mars</span>
+        <div class="src">Källa: GA4 property 300137516</div>
       </div>
     </div>
 
     <div class="note">
-      <strong>Två siffror, två historier.</strong> Ads-plattformen säger att ni över-presterade målet med 24%. GA4 säger att ni missade målet med 53%. Skillnaden är hur Ads räknar (smart bidding hämtar in fler signaler, inkluderar conversion paths som GA4 inte kopplar till google/cpc). Sanningen ligger emellan. Det vi vet säkert: konverteringsvärdet i Google Ads är ner 36% från mars, vilket är det riktiga problemet.
+      <strong>Notering om mätning.</strong> Kontot har två primary conversion actions: Google Shopping App Purchase och Google Shopping App Add To Cart. Det är Purchase som är den faktiska ordersignalen och det är den vi räknar mot målet 100. Att Add To Cart också är primary blåser upp top-line conv-siffror i UI och bör städas upp som del av restore-planen. Smart Bidding optimerar mot blandningen, inte mot ren ordersignal.
     </div>
   </div>
 </section>
@@ -324,22 +324,23 @@
 
     <table>
       <thead>
-        <tr><th>Kampanj</th><th class="num">Spend mars</th><th class="num">Spend april</th><th class="num">Värde mars</th><th class="num">Värde april</th><th class="num">ROAS mars</th><th class="num">ROAS april</th></tr>
+        <tr><th>Kampanj</th><th class="num">Spend mars</th><th class="num">Spend april</th><th class="num">Ordrar mars</th><th class="num">Ordrar april</th><th class="num">Värde mars</th><th class="num">Värde april</th><th class="num">ROAS apr</th></tr>
       </thead>
       <tbody>
-        <tr><td>PMax Shopping (CY)</td><td class="num">4 403 kr</td><td class="num">6 187 kr</td><td class="num">16 905 kr</td><td class="num neg">7 847 kr</td><td class="num">3,84</td><td class="num neg">1,27</td></tr>
-        <tr><td>Sök Brand (CY)</td><td class="num">1 012 kr</td><td class="num">1 062 kr</td><td class="num">47 569 kr</td><td class="num neg">27 535 kr</td><td class="num">47,0</td><td class="num neg">25,9</td></tr>
-        <tr><td>Sök Generisk (CY)</td><td class="num">1 820 kr</td><td class="num">2 017 kr</td><td class="num">3 521 kr</td><td class="num pos">9 066 kr</td><td class="num">1,94</td><td class="num pos">4,49</td></tr>
-        <tr><td>Savant-kampanjer (3 st)</td><td class="num">835 kr</td><td class="num">0 kr</td><td class="num">1 422 kr</td><td class="num">0 kr</td><td class="num">1,70</td><td class="num">stängda</td></tr>
-        <tr><td><strong>Totalt</strong></td><td class="num"><strong>8 069 kr</strong></td><td class="num"><strong>9 266 kr</strong></td><td class="num"><strong>69 417 kr</strong></td><td class="num neg"><strong>44 448 kr</strong></td><td class="num"><strong>8,60</strong></td><td class="num neg"><strong>4,80</strong></td></tr>
+        <tr><td>PMax Shopping (CY)</td><td class="num">4 403 kr</td><td class="num">6 187 kr</td><td class="num">24</td><td class="num neg">20</td><td class="num">7 140 kr</td><td class="num neg">5 991 kr</td><td class="num neg">0,97</td></tr>
+        <tr><td>Sök Brand (CY)</td><td class="num">1 012 kr</td><td class="num">1 062 kr</td><td class="num">45</td><td class="num neg">22</td><td class="num">20 464 kr</td><td class="num neg">10 329 kr</td><td class="num">9,73</td></tr>
+        <tr><td>Sök Generisk (CY)</td><td class="num">1 820 kr</td><td class="num">2 017 kr</td><td class="num">11</td><td class="num pos">20</td><td class="num">3 521 kr</td><td class="num pos">9 066 kr</td><td class="num pos">4,49</td></tr>
+        <tr><td>Savant-kampanjer (3 st)</td><td class="num">835 kr</td><td class="num">0 kr</td><td class="num">4</td><td class="num">0</td><td class="num">977 kr</td><td class="num">0 kr</td><td class="num">stängda</td></tr>
+        <tr><td><strong>Totalt</strong></td><td class="num"><strong>8 069 kr</strong></td><td class="num"><strong>9 266 kr</strong></td><td class="num"><strong>84</strong></td><td class="num neg"><strong>62</strong></td><td class="num"><strong>32 102 kr</strong></td><td class="num neg"><strong>25 386 kr</strong></td><td class="num neg"><strong>2,74</strong></td></tr>
       </tbody>
     </table>
+    <p class="src-tag" style="margin-top: 12px;">Källa: Google Ads, Google Shopping App Purchase, mars och april 2026.</p>
 
     <div class="note">
       <strong>Tre observationer.</strong>
-      <strong>1.</strong> PMax är där tappet sitter (ROAS 3,84 till 1,27). Det är vår huvudprioritering.
-      <strong>2.</strong> Sök Generisk växte både i spend och prestation (ROAS 1,94 till 4,49, värde mer än fördubblat). Det är där generiskt börjar bära.
-      <strong>3.</strong> Brand står för 62% av kontots intäktsvärde i april på 11% av spenden. Det är som det brukar och behöver fortsätta. Men brand tappade också ROAS, från 47 till 26, som vi får titta på.
+      <strong>1.</strong> Brand är där det största tappet i ordrar sitter. 45 till 22 ordrar, värdet ner 50%. Brand-trafiken minskade i april. Det är inte ett kampanjproblem utan ett efterfrågeproblem på sökord runt "pure effect".
+      <strong>2.</strong> PMax tappade 4 ordrar (24 till 20) på 41% mer spend. Lägre direkt tapp i ordrar än vi trodde. Värre i ROAS (1,62 till 0,97) eftersom vi spenderade mer för att få ungefär samma volym.
+      <strong>3.</strong> Sök Generisk är den enda kampanjen som växte både i ordrar (+82%) och i värde (+157%). Det är där generiskt börjar bära.
     </div>
   </div>
 </section>
@@ -396,7 +397,7 @@
   <div class="inner">
     <div class="num">06 · PMax</div>
     <h2>Vad som hände i PMax. Min analys.</h2>
-    <p style="max-width: 800px; color: var(--ink-soft);">Kostnad +41% och klick +70% medan konverteringar tappade 60% och värdet 56%. Det är inte ett efterfrågetapp. Det är en kombination av tre saker, i den här ordningen.</p>
+    <p style="max-width: 800px; color: var(--ink-soft);">Mätt på Google Shopping App Purchase: kostnad +41%, klick +70%, ordrar -17% (24 till 20), värde -16% (7 140 till 5 991), ROAS -40% (1,62 till 0,97). Inte sammanbrottet det ser ut som om man räknar med Add-to-Cart, men en tydlig kvalitets- och effektivitetsförsämring. Tre orsaker, i den här ordningen.</p>
 
     <div class="three-col" style="margin-top: 28px;">
       <div class="col-card">
@@ -414,8 +415,8 @@
       <div class="col-card">
         <span class="tag fix">Orsak 3</span>
         <h3>Trafikkvaliteten gick ner</h3>
-        <p>Klick +70% men konverteringar -60%. Söktermer i april inkluderar "pure" (143 kr, 0 SEK), "mattrengöring bäst i test" (112 kr), "yocoair" och "tirtyl soap" (konkurrenter).</p>
-        <p>PMax flyttade också spend till 500ml-varianter och refill-produkter som inte hade köpintention.</p>
+        <p>Klick +70% medan ordrar bara hängde med från 24 till 20. Söktermer i april inkluderar "pure" (143 kr, 0 SEK), "mattrengöring bäst i test" (112 kr), "yocoair" och "tirtyl soap" (konkurrenter).</p>
+        <p>PMax flyttade också spend till 500ml-varianter och refill-produkter som inte hade köpintention. Det är där effektiviteten försvann.</p>
       </div>
     </div>
 
@@ -434,24 +435,24 @@
     <div class="two-col uneven">
       <div>
         <ul class="checklist" style="font-size: 16px;">
-          <li><strong>1. Verifiera conversion action.</strong> Säkerställ att Shopify-purchase med ordervärde är Primary i Google Ads. Städa eventuella dubbletter mellan Shopify-app, GA4-import och pixel.</li>
-          <li><strong>2. Byt budstrategi.</strong> Maximize conversion value med tROAS 250 till 300%. Mars låg på ROAS 384%, april på 119%. Vi vill ha en stabiliserande nivå däremellan.</li>
-          <li><strong>3. Sänk budgeten tillfälligt.</strong> Från 240 till 180 till 200 kr per dag i 7 dagar. Skala tillbaka i 10 till 15% steg när 7-dagars ROAS är över 2,5 till 3,0.</li>
+          <li><strong>1. Städa conversion goals.</strong> Bara Google Shopping App Purchase som Primary. Flytta Add To Cart till Secondary så Smart Bidding fortsätter ha signalen utan att blåsa upp ROAS-/conv-räkningen. Då blir UI-siffrorna jämförbara med Shopify-ordrar.</li>
+          <li><strong>2. Byt budstrategi.</strong> Maximize conversion value med tROAS 200%. När ren Purchase är primary motsvarar mars-bilden ROAS 1,62 (alltså 162%). 200% är ett rimligt mål, inte för aggressivt.</li>
+          <li><strong>3. Sänk budgeten tillfälligt.</strong> Från 240 till 180 till 200 kr per dag i 7 dagar. Skala tillbaka i 10 till 15% steg när 7-dagars purchase-ROAS är över 1,5.</li>
           <li><strong>4. Separera produktmixen.</strong> Listing group eller egen PMax för Daybreak 75 ml och övriga proven sellers. Exkludera 500ml-varianter och refills tillfälligt tills de bevisat sig.</li>
           <li><strong>5. Lägg negativa söktermer.</strong> Lista i nästa sektion.</li>
           <li><strong>6. Inga fler ändringar i 7 dagar.</strong> PMax behöver lugn för att lära in.</li>
         </ul>
       </div>
       <div>
-        <h3>Skalningsregler vi följer från och med nu</h3>
+        <h3>Skalningsregler vi följer (purchase-only ROAS)</h3>
         <ul style="font-size: 15px;">
-          <li>7-dagars ROAS över 3,0 och minst 10 konverteringar: höj budget 10 till 15%.</li>
-          <li>ROAS 1,5 till 3,0: håll budget.</li>
-          <li>ROAS under 1,5 i 5 till 7 dagar: sänk budget eller höj tROAS.</li>
+          <li>7-dagars Purchase-ROAS över 1,8 och minst 8 ordrar: höj budget 10 till 15%.</li>
+          <li>ROAS 1,2 till 1,8: håll budget.</li>
+          <li>ROAS under 1,0 i 5 till 7 dagar: sänk budget eller höj tROAS.</li>
           <li>Aldrig budgethöjning samma dag som budstrategibyte.</li>
         </ul>
         <h3 style="margin-top: 30px;">Mätpunkter veckovis</h3>
-        <p style="font-size: 15px;">Cyntora följer Google Ads konv.värde mot Shopify-orderintäkt och GA4 purchaseRevenue varje vecka. Stor divergens flaggas som conversion goal-fel, inte kampanjproblem.</p>
+        <p style="font-size: 15px;">Cyntora följer Google Ads Purchase-ordrar mot Shopify-orderintäkt och GA4 purchaseRevenue varje vecka. Stor divergens flaggas som conversion goal-fel, inte kampanjproblem.</p>
       </div>
     </div>
   </div>
@@ -520,19 +521,19 @@
         <p><strong>Plan</strong>: skala spend 15 till 20% med behållen tROAS. Lägg två till tre nya ad groups runt textilspray-varianter.</p>
       </div>
       <div class="col-card">
-        <span class="tag test">Tidigt</span>
+        <span class="tag scale">Klart att testa</span>
         <h3>Träning och syntet</h3>
-        <p><strong>Sökord</strong>: "ta bort lukt träningskläder", "skolukt spray". Klick i april men 0 konv.</p>
-        <p><strong>Plan</strong>: behåll i Search Generisk men kräver landningssida med träningsfokus innan vi skalar. Läs sektion 11.</p>
+        <p><strong>Sökord</strong>: "ta bort lukt träningskläder", "skolukt spray". Klick i april men 0 ordrar än.</p>
+        <p><strong>LP finns</strong>: pureeffectsweden.com/sv-se/pages/sport-traning. Cyntora bygger dedikerad ad group med träningsspecifika sökord och pekar dit. Test-budget 50 till 70 kr per dag.</p>
       </div>
       <div class="col-card">
         <span class="tag test">Skor och mocka</span>
         <h3>Drar organiskt redan</h3>
         <p><strong>Organiskt</strong>: mocka-guiden får 60 GSC-klick på 7 729 visningar i april. Sneakerguiden drar trafik direkt.</p>
-        <p><strong>Plan</strong>: Search Generisk-test runt "spray sneakers lukt" först när landningssidan finns.</p>
+        <p><strong>Plan</strong>: Search Generisk-test runt "spray sneakers lukt" och liknande när landningssidan för skor finns.</p>
       </div>
     </div>
-    <div class="note"><strong>Sammanfattat.</strong> Textilspray är motorn i Search Generisk redan. Träning och skor kan bli motorer också, men kräver att Pure Effect bygger landningssidor först. Cyntora kör Search-tester när sidorna finns.</div>
+    <div class="note"><strong>Sammanfattat.</strong> Textilspray är motorn i Search Generisk redan. Träning kan vi börja testa direkt nu när /sv-se/pages/sport-traning finns. Skor väntar på en dedikerad LP innan vi skalar Search-test.</div>
   </div>
 </section>
 
@@ -561,7 +562,7 @@
         <tr>
           <td>blogs/nyheter/varfor-svettlukt-fastnar-sa-hart-i-syntet</td>
           <td class="num">3 606</td><td class="num">27</td><td class="num">5,5</td>
-          <td>Lägg in träningskläder-CTA, bind till kommande träningssida</td>
+          <td>Lägg in träningskläder-CTA, länka till /sv-se/pages/sport-traning</td>
         </tr>
         <tr>
           <td>blogs/nyheter/guide-ta-hand-om-vinterskor-uggs</td>
@@ -588,15 +589,15 @@
 <section class="alt">
   <div class="inner">
     <div class="num">11 · Rekommendationer LP</div>
-    <h2>Tre landningssidor som skulle hjälpa Google Ads.</h2>
-    <p style="max-width: 800px; color: var(--ink-soft);">Cyntora levererar inte copy eller sidbygge. Det här är vad vi rekommenderar att Pure Effect bygger för att Search Generisk ska kunna skala på fler situationer. Listan finns med er om ni vill dela med er content-resurs.</p>
+    <h2>Landningssidor som skulle hjälpa Google Ads.</h2>
+    <p style="max-width: 800px; color: var(--ink-soft);">Cyntora levererar inte copy eller sidbygge. Det här är observationer kring befintliga och saknade landningssidor som påverkar vad vi kan skala i Search Generisk. Listan följer med er.</p>
 
     <div class="three-col">
       <div class="col-card">
         <h3>Städ och interior</h3>
         <h4>Status idag</h4>
         <p>collections/rengoring drar 49 sessioner i april. Svag som landningssida i Google Ads, ingen tydlig hierarki.</p>
-        <h4>Rekommenderat innehåll</h4>
+        <h4>Vad som skulle hjälpa</h4>
         <ul>
           <li>Hero med användningsområden (golv, kakel, badrum)</li>
           <li>Tre situationsblock med produktlänk</li>
@@ -604,15 +605,16 @@
         </ul>
       </div>
       <div class="col-card">
-        <h3>Mode och textil (träning)</h3>
+        <h3>Mode och textil (PDP)</h3>
         <h4>Status idag</h4>
-        <p>Textilspray-PDP:n står stadig med 246 sessioner på /sv-se i april. Saknar situationsspecifika sektioner som matchar sökord vi köper.</p>
-        <h4>Rekommenderat innehåll</h4>
+        <p>Textilspray-PDP:n drar 246 sessioner på /sv-se i april. Saknar situationsspecifika sektioner som matchar sökord vi köper i Search.</p>
+        <h4>Vad som skulle hjälpa</h4>
         <ul>
-          <li>Situationsblock på PDP eller egen LP: träningskläder, sneakers, ull, festkläder</li>
-          <li>Internal linking från ull-noppning, mocka, svettlukt-syntet</li>
+          <li>Situationsblock direkt på PDP: ull, festkläder, mocka</li>
+          <li>Internal linking från ull-noppning, mocka, svettlukt-syntet-bloggarna</li>
           <li>Före och efter-sektion (foto eller mikrocase)</li>
         </ul>
+        <p style="font-size: 13px; color: var(--ink-soft); margin-top: 8px;">Träning har redan dedikerad LP: /sv-se/pages/sport-traning. Vi kör Search-test mot den direkt.</p>
       </div>
       <div class="col-card">
         <h3>Resa</h3>
@@ -683,7 +685,7 @@
         </ul>
         <h3 style="margin-top: 22px;">Vad kunden bidrar med utanför Google Ads</h3>
         <ul style="font-size: 16px;">
-          <li>Två till tre nya situationssidor (träning, sneakers, resa) som vi kan skicka Search-trafik till.</li>
+          <li>Sneakers- och resa-LP. Träning har ni redan på /sv-se/pages/sport-traning.</li>
           <li>SEO-optimering på de fem GSC-sidor som ligger pos 4 till 7.</li>
           <li>Brand-kommunikation som håller volymen på "pure effect"-sökord uppe.</li>
         </ul>
@@ -721,7 +723,8 @@
         <tr><td>Skala Sök Generisk-budget 15 till 20% när PMax är stabilt</td><td>Cyntora</td><td><span class="pill month">Vecka 20-21</span></td><td>Linda godkänner innan</td></tr>
         <tr><td>Veckorapport måndag 12 maj</td><td>Cyntora</td><td><span class="pill week">12 maj</span></td><td>Format bekräftat</td></tr>
         <tr><td>SEO-optimering på 5 GSC-sidor (mocka, jeans, syntet, kemtvätt, skidkläder)</td><td>Pure Effect</td><td><span class="pill month">Maj-juni</span></td><td>Rekommendation, inte Cyntora-leverans</td></tr>
-        <tr><td>Bygga landningssidor: träning, sneakers, resa</td><td>Pure Effect</td><td><span class="pill month">Maj-juni</span></td><td>Rekommendation, Cyntora kör Search-test när LP finns</td></tr>
+        <tr><td>Bygga landningssidor: sneakers och resa</td><td>Pure Effect</td><td><span class="pill month">Maj-juni</span></td><td>Rekommendation. Träning är redan klart, Cyntora kör Search-test mot den direkt</td></tr>
+        <tr><td>Search-test mot /sv-se/pages/sport-traning (träningskläder)</td><td>Cyntora</td><td><span class="pill week">Vecka 19</span></td><td>50 till 70 kr per dag, behåller eller skalar baserat på 14d-data</td></tr>
         <tr><td>Nästa möte</td><td>Båda</td><td><span class="pill month">5 juni</span></td><td>Tid bokas i kalender</td></tr>
       </tbody>
     </table>
