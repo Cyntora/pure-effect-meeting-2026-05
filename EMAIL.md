@@ -8,7 +8,7 @@ Hej Linda,
 
 Bifogar underlaget inför mötet imorgon kl X. Jag har gått igenom Google Ads för mars och april, jämfört mot GA4 och Search Console, och byggt en kort deck som följer er agenda punkt för punkt.
 
-Länk: {{LIVE_URL}}
+Länk: https://cyntora.github.io/pure-effect-meeting-2026-05/
 
 Det viktigaste i förväg:
 
